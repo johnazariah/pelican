@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebApp.Pelican.Configuration.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CompanyFileId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">d27b1de5-ac81-44ed-9ec0-c9c0513146e1</Value>
+    </Setting>
+    <Setting Name="ClientId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">vaxszupn3bjm8e2r99fs7ssb</Value>
+    </Setting>
+    <Setting Name="ClientSecret" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Pm5fycq29yNmJKeVDKHYwFWs</Value>
+    </Setting>
+    <Setting Name="RedirectUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:38312/Authorize</Value>
+    </Setting>
+    <Setting Name="StorageAccountName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">pelicanstorage</Value>
+    </Setting>
+    <Setting Name="StorageAccessKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">jOvccS+ds/nin1/LE6NPdHvKmtbq2elnLPwc2vuoa+OdFETAva7cT8ZAk3WmHkXLY+uSAwZXPjO7Rb9wRlP7jQ==</Value>
+    </Setting>
+    <Setting Name="ApiBaseUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="StorageAccount" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">myobpdqaart</Value>
+    </Setting>
+    <Setting Name="StorageAccountKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MHDYieseAgGX6HbE8yWK4e0L2eKkUt+an6UbX1/6o0nC2FK2pmgxi/OVW+WEVyH50ROBRMtw0wxf057KDTaDfA==</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
