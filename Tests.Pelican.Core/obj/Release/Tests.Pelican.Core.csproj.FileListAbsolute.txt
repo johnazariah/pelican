@@ -1,0 +1,5 @@
+D:\work\research\MYOB.Pelican\Tests.Pelican.Core\bin\Release\Tests.Pelican.Core.dll
+D:\work\research\MYOB.Pelican\Tests.Pelican.Core\bin\Release\Tests.Pelican.Core.pdb
+D:\work\research\MYOB.Pelican\Tests.Pelican.Core\obj\Release\Tests.Pelican.Core.csprojResolveAssemblyReference.cache
+D:\work\research\MYOB.Pelican\Tests.Pelican.Core\obj\Release\Tests.Pelican.Core.dll
+D:\work\research\MYOB.Pelican\Tests.Pelican.Core\obj\Release\Tests.Pelican.Core.pdb
