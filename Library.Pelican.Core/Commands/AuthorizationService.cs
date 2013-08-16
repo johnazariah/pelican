@@ -39,6 +39,8 @@ namespace Pelican.Commands
 
             _authorizedUserAndFileTable = new AuthorizedUserAndFileTable(cloudStorageAccount,
                                                                          "PelicanConfiguration");
+
+            _authorizedUserAndCompanyFile = _authorizedUserAndFileTable.RetrieveInstanceByRowKey("John Azariah");
         }
 
         public void SaveToken(string code,

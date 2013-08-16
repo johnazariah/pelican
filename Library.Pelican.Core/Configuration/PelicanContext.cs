@@ -11,9 +11,12 @@ namespace Pelican.Configuration
 {
     public class PelicanContext : CloudRunnerContext
     {
+        public IPelicanConfiguration Configuration { get; set; }
+
         public PelicanContext(IPelicanConfiguration configuration)
             : base(configuration)
         {
+            Configuration = configuration;
             var cloudStorageAccount = new CloudStorageAccount(new StorageCredentials(configuration.StorageAccount,
                                                                                      configuration.StorageAccountKey),
                                                               true);

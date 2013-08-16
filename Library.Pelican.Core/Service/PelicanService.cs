@@ -3,6 +3,7 @@ using System.Linq;
 
 using Microsoft.WindowsAzure.Storage.Table;
 
+using Pelican.Commands;
 using Pelican.Configuration;
 using Pelican.Models;
 
@@ -50,9 +51,12 @@ namespace Pelican.Service
                            .SingleOrDefault();
         }
 
-        public void AddSale(PelicanSale pelicanSale)
+        public void AddSale(PelicanSale pelicanCustomer)
         {
-            _context.PelicanSaleTable.EnsureInstance(pelicanSale);
+            _context.PelicanSaleTable.EnsureInstance(pelicanCustomer);
+
+            var poster = new PostItemInvoiceToHuxleyApiCommandHandler();
+            poster.PostSaleInvoice(pelicanCustomer);
         }
 
         public PelicanSaleableItem GetSaleableItem(string id)

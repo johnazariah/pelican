@@ -1,23 +1,16 @@
-﻿using Microsoft.WindowsAzure.Storage.Table;
+﻿using System;
+
+using MYOB.AccountRight.SDK.Contracts.Version2.GeneralLedger;
 
 namespace Pelican.Models
 {
-    public abstract class QuantumTableEntity : TableEntity
+    public class QuantumAccount : QuantumTableEntity<Account>
     {
-        public string CompanyFileId
-        {
-            get { return PartitionKey; }
-            set { PartitionKey = value; }
-        }
+        public QuantumAccount(Account item,
+                              Guid companyFileId)
+            : base(item,
+                   companyFileId) {}
 
-        public string UID
-        {
-            get { return RowKey; }
-            set { RowKey = value; }
-        }
-
-        public string RowVersion { get; set; }
+        public QuantumAccount() {}
     }
-
-    public class QuantumAccount : QuantumTableEntity { }
 }

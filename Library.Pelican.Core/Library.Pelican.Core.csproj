@@ -93,6 +93,10 @@
     <Compile Include="Commands\ApiContext.cs" />
     <Compile Include="Commands\AuthorizationService.cs" />
     <Compile Include="Commands\Extensions.cs" />
+    <Compile Include="Commands\IHuxleyApiSlurper.cs" />
+    <Compile Include="Commands\PostItemInvoiceToHuxleyApiCommand.cs" />
+    <Compile Include="Commands\PostItemInvoiceToHuxleyApiCommandArgument.cs" />
+    <Compile Include="Commands\PostItemInvoiceToHuxleyApiCommandHandler.cs" />
     <Compile Include="Commands\SlurpAccountsFromHuxleyApiCommandArgument.cs" />
     <Compile Include="Commands\SlurpAccountsFromHuxleyApiCommand.cs" />
     <Compile Include="Commands\SlurpAccountsFromHuxleyApiCommandHandler.cs" />
@@ -130,6 +134,7 @@
     <Compile Include="Models\QuantumItemInvoice.cs" />
     <Compile Include="Models\QuantumItemInvoiceTable.cs" />
     <Compile Include="Models\QuantumItemTable.cs" />
+    <Compile Include="Models\QuantumTableEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
