@@ -6,16 +6,16 @@ using Pelican.Service;
 
 namespace WebApp.Pelican.Api.Controllers
 {
-    public class CustomersController : PelicanReadController<Customer>
+    public class CustomersController : PelicanReadController<PelicanCustomer>
     {
         // GET api/values
-        public override IEnumerable<Customer> Get()
+        public override IEnumerable<PelicanCustomer> Get()
         {
             return PelicanService.GetCustomers();
         }
 
         // GET api/values/5
-        public override Customer Get(string id)
+        public override PelicanCustomer Get(string id)
         {
             return PelicanService.GetCustomer(id);
         }

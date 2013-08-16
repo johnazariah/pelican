@@ -1,8 +1,7 @@
-﻿using System;
-
-using BrightSword.Pegasus.API;
+﻿using BrightSword.Pegasus.API;
 using BrightSword.Pegasus.Commands.Core;
 
+using MYOB.AccountRight.SDK.Contracts.Version2.GeneralLedger;
 using MYOB.AccountRight.SDK.Services.GeneralLedger;
 
 using Pelican.Configuration;
@@ -11,6 +10,8 @@ namespace Pelican.Commands
 {
     public class SlurpAccountsFromHuxleyApiCommandHandler : CommandHandler<PelicanContext, SlurpAccountsFromHuxleyApiCommand, SlurpAccountsFromHuxleyApiCommandArgument>
     {
+        protected virtual void ProcessItem(Account item) {}
+
         public override void ProcessCommand(ICommand command,
                                             ICommandHandlerContext context)
         {
@@ -26,12 +27,7 @@ namespace Pelican.Commands
                                null,
                                apiContext.KeyService).ForeachItem(apiContext.CompanyFile,
                                                                   apiContext.CompanyFileCredentials,
-                                                                  _ => Console.WriteLine("{0} ({1}) :: {2}-{3:d4} [{4}]",
-                                                                                         _.UID,
-                                                                                         _.RowVersion,
-                                                                                         _.Type,
-                                                                                         _.Number,
-                                                                                         _.Name));
+                                                                  ProcessItem);
         }
     }
 }

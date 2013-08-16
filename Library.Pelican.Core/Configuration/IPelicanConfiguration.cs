@@ -4,13 +4,19 @@ namespace Pelican.Configuration
 {
     public interface IPelicanConfiguration : ICloudRunnerConfiguration
     {
-        string ClientId { get; }
+        string ClientKey { get; }
         string ClientSecret { get; }
         string RedirectUrl { get; }
         string ApiBaseUrl { get; }
-        string CustomerTableName { get; }
-        string SaleTableName { get; }
-        string SaleableItemTableName { get; }
+        string PelicanCustomerTableName { get; }
+        string PelicanSaleTableName { get; }
+        string PelicanSaleableItemTableName { get; }
+
+        string QuantumCustomerTableName { get; }
+        string QuantumItemTableName { get; }
+        string QuantumAccountTableName { get; }
+        string QuantumItemInvoiceTableName { get; }
+
         string CompanyFileId { get; }
     }
 }

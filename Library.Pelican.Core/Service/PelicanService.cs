@@ -17,50 +17,50 @@ namespace Pelican.Service
             _context = context;
         }
 
-        public IEnumerable<Customer> GetCustomers()
+        public IEnumerable<PelicanCustomer> GetCustomers()
         {
-            return _context.CustomerTable.GetInstances();
+            return _context.PelicanCustomerTable.GetInstances();
         }
 
-        public Customer GetCustomer(string id)
+        public PelicanCustomer GetCustomer(string id)
         {
-            var query = new TableQuery<Customer>().Where(TableQuery.GenerateFilterCondition("RowKey",
+            var query = new TableQuery<PelicanCustomer>().Where(TableQuery.GenerateFilterCondition("RowKey",
                                                                                             QueryComparisons.Equal,
                                                                                             id));
-            return _context.CustomerTable.GetInstances(query)
+            return _context.PelicanCustomerTable.GetInstances(query)
                            .SingleOrDefault();
         }
 
-        public IEnumerable<SaleableItem> GetSaleableItems()
+        public IEnumerable<PelicanSaleableItem> GetSaleableItems()
         {
-            return _context.SaleableItemTable.GetInstances();
+            return _context.PelicanSaleableItemTable.GetInstances();
         }
 
-        public IEnumerable<Sale> GetSales()
+        public IEnumerable<PelicanSale> GetSales()
         {
-            return _context.SaleTable.GetInstances();
+            return _context.PelicanSaleTable.GetInstances();
         }
 
-        public Sale GetSale(string id)
+        public PelicanSale GetSale(string id)
         {
-            var query = new TableQuery<Sale>().Where(TableQuery.GenerateFilterCondition("RowKey",
+            var query = new TableQuery<PelicanSale>().Where(TableQuery.GenerateFilterCondition("RowKey",
                                                                                         QueryComparisons.Equal,
                                                                                         id));
-            return _context.SaleTable.GetInstances(query)
+            return _context.PelicanSaleTable.GetInstances(query)
                            .SingleOrDefault();
         }
 
-        public void AddSale(Sale sale)
+        public void AddSale(PelicanSale pelicanSale)
         {
-            _context.SaleTable.EnsureInstance(sale);
+            _context.PelicanSaleTable.EnsureInstance(pelicanSale);
         }
 
-        public SaleableItem GetSaleableItem(string id)
+        public PelicanSaleableItem GetSaleableItem(string id)
         {
-            var query = new TableQuery<SaleableItem>().Where(TableQuery.GenerateFilterCondition("RowKey",
+            var query = new TableQuery<PelicanSaleableItem>().Where(TableQuery.GenerateFilterCondition("RowKey",
                                                                                                 QueryComparisons.Equal,
                                                                                                 id));
-            return _context.SaleableItemTable.GetInstances(query)
+            return _context.PelicanSaleableItemTable.GetInstances(query)
                            .SingleOrDefault();
         }
     }

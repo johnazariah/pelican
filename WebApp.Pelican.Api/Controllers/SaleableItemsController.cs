@@ -6,26 +6,26 @@ using Pelican.Service;
 
 namespace WebApp.Pelican.Api.Controllers
 {
-    public class SaleableItemsController : PelicanReadController<SaleableItem>
+    public class SaleableItemsController : PelicanReadController<PelicanSaleableItem>
     {
         // GET api/values
-        public override IEnumerable<SaleableItem> Get()
+        public override IEnumerable<PelicanSaleableItem> Get()
         {
             return PelicanService.GetSaleableItems();
         }
 
         // GET api/values/5
-        public override SaleableItem Get(string id)
+        public override PelicanSaleableItem Get(string id)
         {
             return PelicanService.GetSaleableItem(id);
         }
     }
 }
 
-//private static readonly Dictionary<string, SaleableItem> values = new Dictionary<string, SaleableItem>
+//private static readonly Dictionary<string, PelicanSaleableItem> values = new Dictionary<string, PelicanSaleableItem>
 //                                                                  {
 //                                                                      {
-//                                                                          "5720A577-BF07-40EE-8260-765C7A2F1ACA", new SaleableItem
+//                                                                          "5720A577-BF07-40EE-8260-765C7A2F1ACA", new PelicanSaleableItem
 //                                                                                                                  {
 //                                                                                                                      Active = true,
 //                                                                                                                      Name = "White Bread Loaf",
@@ -35,7 +35,7 @@ namespace WebApp.Pelican.Api.Controllers
 //                                                                                                                  }
 //                                                                      },
 //                                                                      {
-//                                                                          "C2727921-4A2A-4D86-B211-5F0338BB29F0", new SaleableItem
+//                                                                          "C2727921-4A2A-4D86-B211-5F0338BB29F0", new PelicanSaleableItem
 //                                                                                                                  {
 //                                                                                                                      Active = true,
 //                                                                                                                      Name = "Artisan Bread Loaf",

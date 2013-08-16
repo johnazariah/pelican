@@ -18,31 +18,48 @@ namespace Pelican.Configuration
                                                                                      configuration.StorageAccountKey),
                                                               true);
 
-            CustomerTable = new CustomerTable(cloudStorageAccount,
-                                              configuration.CustomerTableName);
+            PelicanCustomerTable = new PelicanCustomerTable(cloudStorageAccount,
+                                                            configuration.PelicanCustomerTableName);
 
-            SaleTable = new SaleTable(cloudStorageAccount,
-                                      configuration.SaleTableName);
+            PelicanSaleTable = new PelicanSaleTable(cloudStorageAccount,
+                                                    configuration.PelicanSaleTableName);
 
-            SaleableItemTable = new SaleableItemTable(cloudStorageAccount,
-                                                      configuration.SaleableItemTableName);
-
-            ClientKey = configuration.ClientId;
+            PelicanSaleableItemTable = new PelicanSaleableItemTable(cloudStorageAccount,
+                                                                    configuration.PelicanSaleableItemTableName);
+            QuantumAccountTable = new QuantumAccountTable(cloudStorageAccount,
+                                                          configuration.QuantumAccountTableName);
+            QuantumCustomerTable = new QuantumCustomerTable(cloudStorageAccount,
+                                                            configuration.QuantumCustomerTableName);
+            QuantumItemInvoiceTable = new QuantumItemInvoiceTable(cloudStorageAccount,
+                                                                  configuration.QuantumItemInvoiceTableName);
+            QuantumItemTable = new QuantumItemTable(cloudStorageAccount,
+                                                    configuration.QuantumItemTableName);
+            ClientKey = configuration.ClientKey;
             ClientSecret = configuration.ClientSecret;
             RedirectUrl = configuration.RedirectUrl;
             CompanyFileId = Guid.Parse(configuration.CompanyFileId);
         }
+
+        public QuantumItemTable QuantumItemTable { get; set; }
+
+        public QuantumItemInvoiceTable QuantumItemInvoiceTable { get; set; }
+
+        public QuantumCustomerTable QuantumCustomerTable { get; set; }
+
+        public QuantumAccountTable QuantumAccountTable { get; set; }
 
         public string ClientKey { get; private set; }
 
         public string ClientSecret { get; private set; }
 
         public string RedirectUrl { get; private set; }
-        public CustomerTable CustomerTable { get; private set; }
 
-        public SaleTable SaleTable { get; private set; }
+        public PelicanCustomerTable PelicanCustomerTable { get; private set; }
 
-        public SaleableItemTable SaleableItemTable { get; private set; }
+        public PelicanSaleTable PelicanSaleTable { get; private set; }
+
+        public PelicanSaleableItemTable PelicanSaleableItemTable { get; private set; }
+
         public Guid CompanyFileId { get; private set; }
 
         public new static PelicanContext CreateFromApplicationSettings()

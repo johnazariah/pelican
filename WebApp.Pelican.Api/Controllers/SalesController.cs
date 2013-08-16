@@ -7,22 +7,22 @@ using Pelican.Service;
 
 namespace WebApp.Pelican.Api.Controllers
 {
-    public class SalesController : PelicanReadWriteController<Sale>
+    public class SalesController : PelicanReadWriteController<PelicanSale>
     {
         // GET api/values
-        public override IEnumerable<Sale> Get()
+        public override IEnumerable<PelicanSale> Get()
         {
             return PelicanService.GetSales();
         }
 
         // GET api/values/5
-        public override Sale Get(string id)
+        public override PelicanSale Get(string id)
         {
             return PelicanService.GetSale(id);
         }
 
         // PUT api/values/5
-        public override void Put([FromBody] Sale value)
+        public override void Put([FromBody] PelicanSale value)
         {
             PelicanService.AddSale(value);
         }

@@ -80,33 +80,6 @@ namespace Pelican.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PelicanCustomers")]
-        public string CustomerTableName {
-            get {
-                return ((string)(this["CustomerTableName"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PelicanSales")]
-        public string SaleTableName {
-            get {
-                return ((string)(this["SaleTableName"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PelicanSaleableItems")]
-        public string SaleableItemTableName {
-            get {
-                return ((string)(this["SaleableItemTableName"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("d27b1de5-ac81-44ed-9ec0-c9c0513146e1")]
         public string CompanyFileId {
             get {
@@ -117,9 +90,9 @@ namespace Pelican.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("vaxszupn3bjm8e2r99fs7ssb")]
-        public string ClientId {
+        public string ClientKey {
             get {
-                return ((string)(this["ClientId"]));
+                return ((string)(this["ClientKey"]));
             }
         }
         
@@ -147,6 +120,69 @@ namespace Pelican.Properties {
         public string ApiBaseUrl {
             get {
                 return ((string)(this["ApiBaseUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("PelicanCustomers")]
+        public string PelicanCustomerTableName {
+            get {
+                return ((string)(this["PelicanCustomerTableName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("PelicanSales")]
+        public string PelicanSaleTableName {
+            get {
+                return ((string)(this["PelicanSaleTableName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("PelicanSaleableItems")]
+        public string PelicanSaleableItemTableName {
+            get {
+                return ((string)(this["PelicanSaleableItemTableName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("QuantumCustomers")]
+        public string QuantumCustomerTableName {
+            get {
+                return ((string)(this["QuantumCustomerTableName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("QuantumAccounts")]
+        public string QuantumAccountTableName {
+            get {
+                return ((string)(this["QuantumAccountTableName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("QuantumItems")]
+        public string QuantumItemTableName {
+            get {
+                return ((string)(this["QuantumItemTableName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("QuantumItemInvoices")]
+        public string QuantumItemInvoiceTableName {
+            get {
+                return ((string)(this["QuantumItemInvoiceTableName"]));
             }
         }
     }
