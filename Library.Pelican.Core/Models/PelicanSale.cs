@@ -6,9 +6,9 @@ namespace Pelican.Models
     {
         public string Id { get; set; }
 
-        public PelicanCustomer PelicanCustomer { get; set; }
+        public PelicanCustomer Customer { get; set; }
 
-        public PelicanSaleableItem[] PelicanSaleableItems { get; set; }
+        public PelicanSaleableItem[] SaleableItems { get; set; }
 
         public bool Paid { get; set; }
     }

@@ -14,7 +14,7 @@ namespace Pelican.Models
             Id = item.UID.ToString("D");
             RowKey = Id;
             Name = item.Name;
-            Price = item.BaseSellingPrice;
+            Price = Convert.ToDouble(item.BaseSellingPrice);
             PictureUrl = item.Description;
             Active = item.IsActive;
         }
@@ -25,7 +25,7 @@ namespace Pelican.Models
 
         public string Name { get; set; }
 
-        public Decimal Price { get; set; }
+        public double Price { get; set; }
 
         public string PictureUrl { get; set; }
 

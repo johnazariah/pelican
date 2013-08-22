@@ -56,17 +56,17 @@ namespace Pelican.Commands
                 entity.InvoiceType = InvoiceLayoutType.Item;
                 entity.Customer = new CustomerLink
                                   {
-                                      UID = Guid.Parse(sale.PelicanCustomer.Id)
+                                      UID = Guid.Parse(sale.Customer.Id)
                                   };
                 entity.Number = string.Format("SJ{0:D5}",
                                               _referenceNbr++);
                 entity.Date = DateTime.Today;
                 var invoiceLines = new List<ItemInvoiceLine>();
                 for (var index = 0;
-                    index < sale.PelicanSaleableItems.Count();
+                    index < sale.SaleableItems.Count();
                     index++)
                 {
-                    var saleableItem = sale.PelicanSaleableItems[index];
+                    var saleableItem = sale.SaleableItems[index];
                     var item = new ItemInvoiceLine();
                     item.Item = new ItemLink
                                 {
@@ -74,7 +74,7 @@ namespace Pelican.Commands
                                 };
                     item.RowID = index;
                     item.ShipQuantity = 1;
-                    item.Total = saleableItem.Price;
+                    item.Total = Convert.ToDecimal(saleableItem.Price);
                     item.TaxCode = new TaxCodeLink
                                    {
                                        UID = _taxCode.UID
@@ -82,7 +82,7 @@ namespace Pelican.Commands
                     invoiceLines.Add(item);
                 }
                 entity.Lines = invoiceLines;
-                entity.TotalAmount = sale.PelicanSaleableItems.Sum(_ => _.Price);
+                entity.TotalAmount = Convert.ToDecimal(sale.SaleableItems.Sum(_ => _.Price));
                 entity.Comment = "Entered via Pelican";
                 return service.Insert(apiContext.CompanyFile,
                                       entity,
@@ -201,17 +201,17 @@ namespace Pelican.Commands
                 entity.InvoiceType = InvoiceLayoutType.Item;
                 entity.Customer = new CustomerLink
                 {
-                    UID = Guid.Parse(instance.PelicanCustomer.Id)
+                    UID = Guid.Parse(instance.Customer.Id)
                 };
                 entity.Number = string.Format("SJ{0:D5}",
                                               _referenceNbr++);
                 entity.Date = DateTime.Today;
                 var invoiceLines = new List<CustomerLine>();
                 for (var index = 0;
-                    index < instance.PelicanSaleableItems.Count();
+                    index < instance.SaleableItems.Count();
                     index++)
                 {
-                    var saleableItem = instance.PelicanSaleableItems[index];
+                    var saleableItem = instance.SaleableItems[index];
                     var item = new CustomerLine();
                     item.Item = new ItemLink
                     {
@@ -227,7 +227,7 @@ namespace Pelican.Commands
                     invoiceLines.Add(item);
                 }
                 entity.Lines = invoiceLines;
-                entity.TotalAmount = instance.PelicanSaleableItems.Sum(_ => _.Price);
+                entity.TotalAmount = instance.SaleableItems.Sum(_ => _.Price);
                 entity.Comment = "Entered via Pelican";
                 return service.Insert(apiContext.CompanyFile,
                                       entity,
