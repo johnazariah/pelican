@@ -1,0 +1,16 @@
+﻿<Application
+    x:Class="Pelican.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Pelican"
+    xmlns:localData="using:Pelican.Data"
+    xmlns:activation="using:Windows.ApplicationModel.Activation">
+
+    <Application.Resources>
+
+        <!-- Application-specific resources -->
+
+        <x:String x:Key="AppName">Pelican</x:String>
+
+    </Application.Resources>
+</Application>
